@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block title %} {{ article.title }} {% endblock %}
+{% block body %}
+<main
+  class="d-flex h-100 cover-container d-flex w-100 h-100 p-3 mx-auto flex-column px-3"
+>
+  <h1>{{ article.title }}</h1>
+
+  <div class="alert alert-info">
+    <p>{{ article.text }}</p>
+    <p><b>Date: {{ article.date.date() }}</b></p>
+    <a href="/posts/{{ article.id }}/del" class="btn btn-danger">Delete</a>
+    <a href="/posts/{{ article.id }}/edit" class="btn btn-success">Edit</a>
+  </div>
+</main>
+{% endblock %}

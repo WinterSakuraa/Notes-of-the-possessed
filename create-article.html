@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% block title %}Create Article{% endblock %} {% block
+body %}
+<main
+  class="d-flex h-100 text-center cover-container d-flex w-100 h-100 p-3 mx-auto flex-column px-3"
+>
+  <h1>Adding Article</h1>
+  <form method="post">
+    <input
+      type="text"
+      name="title"
+      id="title"
+      class="form-control"
+      placeholder="Enter title"
+    /><br />
+    <textarea
+      name="intro"
+      id="intro"
+      class="form-control"
+      placeholder="Enter intro"
+    ></textarea
+    ><br />
+    <textarea
+      name="text"
+      id="text"
+      class="form-control"
+      placeholder="Enter main text"
+    ></textarea
+    ><br />
+    <input type="submit" class="btn btn-success" value="Send" />
+  </form>
+</main>
+{% endblock %}
